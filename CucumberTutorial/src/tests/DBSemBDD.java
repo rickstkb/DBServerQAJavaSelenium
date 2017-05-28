@@ -32,7 +32,7 @@ public class DBSemBDD {
 		// Chama metodo para limpar qualquer coisa presente no campo
 		//adicionaProdutoAoCarrinho.limpaCampos(driver);
 		
-		// Aponta quem é o produto
+		// Aponta quem ï¿½ o produto
 		produto = "Batman";
 		
 		// Insere o nome do produto no campo e pesquisa
@@ -52,14 +52,13 @@ public class DBSemBDD {
 		
 		WebElement escolheProd = driver.findElement(By.xpath("//*[@id='pagination_contents']/div[2]/div[1]/div/form/div[2]/a"));
 		String prodrotulo = escolheProd.getText();
-		System.out.println(prodrotulo + " está na Tela de Busca? ->" + escolheProd.isEnabled());
+		System.out.println(prodrotulo + " estï¿½ na Tela de Busca? ->" + escolheProd.isEnabled());
 		escolheProd.click();
 		
 		driver.findElement(By.id("button_cart_94")).click();
 		driver.findElement(By.xpath("html/body/div[7]/h1/span")).click();
 		Thread.sleep(1000);
 		
-		//driver.findElement(By.id("sw_dropdown_8")).click();
 		driver.findElement(By.id("sw_dropdown_8")).click();
 		driver.findElement(By.xpath("//*[@id='dropdown_8']/div/div[2]/div[1]/a")).click();
 		
@@ -67,7 +66,7 @@ public class DBSemBDD {
 		String nomeprodenc = prodnocar.getText();
 		String nomeprodesp = "Batman: Arkham City (X360)";
 		Assert.assertEquals(nomeprodesp, nomeprodenc);
-		System.out.println(nomeprodenc + " está no carrinho? ->" + prodnocar.isEnabled());
+		System.out.println(nomeprodenc + " estï¿½ no carrinho? ->" + prodnocar.isEnabled());
 		System.out.println("Successful");
 		adicionaProdutoAoCarrinho.EvidTeste(driver);
 		
